@@ -32,7 +32,7 @@ let backBtn = document.querySelector(".back");
 let homeBtn = document.querySelector(".home");
 let websitesBtn = document.querySelector(".websites");
 
-// Only add event listeners if elements exist
+// many buttons get event listeners
 if (startUpBtn && startUpScreen && pokemon) {
     startUpBtn.addEventListener("click", function() {
         startUpScreen.classList.add('hide');
@@ -43,6 +43,7 @@ if (startUpBtn && startUpScreen && pokemon) {
     });
 }
 
+//pokemon alerts
 if (alert2Btn) {
     alert2Btn.addEventListener("click", function() {
         alert("nuh uh, you don't have anything in your bag!");
@@ -228,21 +229,22 @@ if (
         if (backBtn) backBtn.classList.remove('hide');
         if (homeBtn) homeBtn.classList.remove('hide');
         if (websitesBtn) websitesBtn.classList.remove('hide');
-        // Hide pokemon screen buttons if present
+        // hide pokemon screen buttons if present
         if (pokemonBtn) pokemonBtn.classList.add('hide');
         if (alert2Btn) alert2Btn.classList.add('hide');
         if (alert3Btn) alert3Btn.classList.add('hide');
         if (alert4Btn) alert4Btn.classList.add('hide');
-        // Optionally reset background
+        // optionally reset background
         document.body.style.backgroundImage = "url('mc_inventory.png')";
         document.body.style.backgroundSize = "925px";
         document.body.style.backgroundColor = "";
-        // Remove hash from URL (optional, for cleanliness)
+        // remove hash from URL (optional, for cleanliness)
         history.replaceState(null, null, 'index.html');
     }
 }
 
 // project showcase 
+// this just takes you to the project page if shulker is clicked
 document.addEventListener("DOMContentLoaded", function() {
     const shulker = document.getElementById("shulker-img");
     if (shulker) {
@@ -252,30 +254,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// contact page button actions
-if (contactsBtn && contactsText && contactScreen && mainOverlay && mainScreen) {
-    contactsBtn.addEventListener("click", function() {
-        mainOverlay.classList.remove('hide');
-        contactScreen.classList.remove('hide');
-        mainScreen.classList.add('blurred');
-    });
-}
-// Hide contact screen and overlay
-const contactBackBtn = document.querySelector('.contact-back-btn');
-if (contactBackBtn && mainOverlay && contactScreen && mainScreen) {
-    contactBackBtn.addEventListener("click", function() {
-        mainOverlay.classList.add('hide');
-        contactScreen.classList.add('hide');
-        mainScreen.classList.remove('blurred');
-    });
-}
-
 // Project page logic 
 let rightImg = document.getElementById('menu_right_side_img');
 let descElement = document.getElementById('menu_right_side_info_description');
 let items = document.querySelectorAll('.menu_left_side_down_item');
 let titleElement = document.getElementById('menu_right_side_info_title');
 
+// everytime you click an image, it will pop its corresponding description and image, replaces the link image
 if (rightImg && descElement && items.length && titleElement) {
     items.forEach(item => {
         item.addEventListener('click', function() {
@@ -303,11 +288,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 //why am i doing this
+//this is the colorful bar, randomly fills
     if (aspirationWindow) {
         const loadingFill = aspirationWindow.querySelector('.loading-fill');
         let timer = null;
         let catShown = false;
-
+//only work if mouse hovers over the aspiration window three, it will show a cat after 5 seconds
         aspirationWindow.addEventListener('mouseenter', function() {
             if (catShown) return;
             loadingFill.style.transition = 'width 5s linear';
@@ -323,6 +309,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     catImg.style.maxWidth = '200px';
                     aspirationWindow.querySelector('.content').appendChild(catImg);
                     catShown = true;
+                    //keep the cat above for the rest of time the persons on the
                 }
             }, 5000);
         });

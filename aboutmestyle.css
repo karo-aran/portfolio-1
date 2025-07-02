@@ -3,6 +3,10 @@
     src: url('mc-7.ttf') format('truetype');
 }
 
+h1 {
+    font-family: "Pixelify Sans", sans-serif;
+    margin-left: 20px;  
+}
 body {
     background-color: #efc1e0;
     justify-content: center;
@@ -189,7 +193,7 @@ h2 {
 }
 .cpp-bar-fill {
     height: 100%;
-    width: 45%; /* Adjust percentage for skill level */
+    width: 45%;
     background: #00599c; /* Blue for C++ */
     border-radius: 10px 0 0 10px;
     transition: width 0.5s;
