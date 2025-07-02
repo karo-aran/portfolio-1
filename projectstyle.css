@@ -239,7 +239,7 @@ body {
     width:70%;
     height:auto;
     margin:0 15%;
-    margin-top:1.5vh;
+    margin-top: 4.5em;
 }
 #menu_right_side_vert_icons{
     position:absolute;
@@ -358,4 +358,47 @@ body {
     width:6vh;
     height:6vh;
     border-radius:50%;
+}
+
+/* navbar IMPORTANT */
+.navbar {
+    z-index: 1000;
+    width: 56.5%;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0)
+}
+.back {
+    z-index: 1002;
+    position: fixed;
+    width: 80px;
+    height: auto;
+    top: 745px;
+    left: 347px;
+}
+.home {
+    z-index: 1002;
+    position: fixed;
+    width: 80px;
+    height: auto;
+    top: 750px;
+    left: 728px;
+}
+.websites {
+    z-index: 1002;
+    position: fixed;
+    width: 80px;
+    height: auto;
+    top: 750px;
+    right: 345px;
+}
+.navbar, .back, .home, .websites {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.navbar-faded, .navbar-faded + .back, .navbar-faded + .back + .home, .navbar-faded + .back + .home + .websites {
+    opacity: 0.3 !important;
+    pointer-events: auto;
 }

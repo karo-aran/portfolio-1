@@ -8,7 +8,7 @@ body {
     text-align: center;
     background-image: url('startupscreen.png');
     background-color: #3A90F5;
-    background-size: 1110px;
+    background-size:1400px;
     background-position: center top;
     background-repeat: no-repeat;
 }
@@ -25,7 +25,7 @@ body {
 
 h1 span {
     position: relative;
-    top: 500px;
+    top: 620px;
     font-size: 30px;
     background: linear-gradient(90deg, #f53ac0 30%, #FFE066 100%);
     -webkit-background-clip: text;
@@ -36,6 +36,36 @@ h1 span {
     text-shadow: 0 0 10px rgba(210, 235, 243, 0.5);
     animation: bounce 0.3s infinite alternate;
 }
+@keyframes bounce {
+  100% {
+    top: 610px;
+  }
+}
+h1 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+h1 span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
 
 /* pokemon screen */
 .pokemon {
@@ -43,15 +73,17 @@ h1 span {
 }
 
 .pokemon-btn {
-    background-color: transparent;
+    background-color: transparent;  
+    border: 0;
     width: 150px;
     height: 50px;
     position: absolute;
-    top: 570px;
+    top: 690px;
     right: 460px;
 }
 
 .btn2, .btn3, .btn4 {
+    border: 0;
     background-color: transparent;
     width: 150px;
     height: 50px;
@@ -59,20 +91,20 @@ h1 span {
 
 .btn2 {
     position: absolute;
-    top: 570px;
-    right: 295px;
+    top: 690px;
+    right: 255px;
 }
 
 .btn3 {
     position: absolute;
-    top: 630px;
+    top: 760px;
     right: 460px;
 }
 
 .btn4 {
     position: absolute;
-    top: 630px;
-    right: 295px;
+    top: 760px;
+    right: 255px;
 }
 
 
@@ -105,162 +137,81 @@ h2 {
     width: 135px;
     height: auto;
     top: 430px;
-    left: 540px;
+    left: 550px;
 }
 .projects-text {
     position: absolute;
     top: 540px;
-    left: 542px;
+    left: 545px;
 }
 /* future button */
 .future {
     position: absolute;
-    width: 140px;
+    width: 138px;
     height: auto;
     top: 335px;
-    right: 633px;
+    right: 645px;
 }
 .future-text {
     position: absolute;
     top: 450px;
-    right: 620px;
+    left: 725px;
+}
+/* contacts button */
+.contacts {
+    position: absolute;
+    width: 140px;
+    height: auto;
+    top: 425px;
+    right: 450px;
+}
+.contacts-text {
+    position: absolute;
+    top: 540px;
+    right: 440px;
 }
 
 
-/* contacts buttons */
-.contact-screen {
-  z-index: 1003;
-  max-width: 1050px;
-  width: 100%;
-  background: #fff;
-  border-radius: 12px;
-  margin: 0 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+/* navbar IMPORTANT */
+.navbar {
+    z-index: 1000;
+    width: 56.5%;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0)
 }
-.container .content{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 20px;
+.back {
+    z-index: 1002;
+    position: absolute;
+    width: 80px;
+    height: auto;
+    top: 630px;
+    left: 340px;
 }
-.content .image-box{
-  max-width: 55%;
+.home {
+    z-index: 1002;
+    position: absolute;
+    width: 80px;
+    height: auto;
+    top: 645px;
+    left: 720px;
 }
-.content .image-box img{
-  width: 100%;
+.websites {
+    z-index: 1002;
+    position: absolute;
+    width: 80px;
+    height: auto;
+    top: 635px;
+    right: 343px;
+
 }
-.content .topic{
-  font-size: 22px;
-  font-weight: 500;
-  color: #ba24c2;
+.navbar, .back, .home, .websites {
+    opacity: 1;
+    transition: opacity 0.5s;
 }
-.content form{
-  width: 40%;
-  margin-right: 30px;
+
+.navbar-faded, .navbar-faded + .back, .navbar-faded + .back + .home, .navbar-faded + .back + .home + .websites {
+    opacity: 0.3 !important;
+    pointer-events: auto;
 }
-.content .input-box{
-  height: 50px;
-  width: 100%;
-  margin: 16px 0;
-  position: relative;
-}
-.content .input-box input{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 6px;
-  font-size: 16px;
-  outline: none;
-  padding-left: 16px;
-  background: #fae9fb;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-.content .input-box input:focus,
-.content .input-box input:valid{
-  border-color: #ba24c2;
-  background-color: #fff;
-}
-.content .input-box label{
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  color: #636c72;
-  font-size: 15px;
-  pointer-events: none;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-}
-.content .input-box input:focus ~ label,
-.content .input-box input:valid ~ label{
-  top: 0;
-  left: 12px;
-  display: 14px;
-  color: #ba24c2;
-  background: #fff;
-}
-.content .message-box{
-  min-height: 100px;
-  position: relative;
-}
-.content .message-box textarea{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  resize: none;
-  background: #fae9fb;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  outline: none;
-  transition: all 0.3s ease;
-}
-.content .message-box textarea:focus{
-  border-color: #ba24c2;
-  background-color: #fff;
-}
-.content .message-box label{
-  position: absolute;
-  font-size: 16px;
-  color: #636c72;
-  left: 18px;
-  top: 6px;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.content .message-box textarea:focus ~ label{
-  left: 12px;
-  top: -10px;
-  color: #ba24c2;
-  font-size: 14px;
-  background: #fff;
-}
-.content .input-box input[type="submit"]{
-  color: #fff;
-  background: #ba24c2;
-  padding-left: 0;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-.content .input-box input[type="submit"]:hover{
-  background-color: #d43ddb;
-}
-/* @media (max-width:1000px) {
-  .content .image-box{
-    max-width: 70%;
-  }
-  .content{
-    padding: 10px 0;
-  }
-}
-@media (max-width:900px) {
-  .content .image-box{
-    display: none;
-  }
-  .content form{
-    width: 100%;
-    margin-left: 30px;
-  }
-} */

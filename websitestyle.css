@@ -1,0 +1,95 @@
+
+/* Google Font for a soft look */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+    padding: 2rem;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #fff6f7, #fceef2);
+    color: #5c4a4a;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #d48da4;
+    margin-bottom: 2rem;
+}
+
+.credit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.credit-card {
+    background-color: #fffafa;
+    border: 2px solid #f6d8e2;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(245, 190, 200, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.credit-card:hover {
+    transform: scale(1.01);
+}
+
+.credit-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #bb5c7a;
+    margin-bottom: 0.5rem;
+}
+
+.credit-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6e5a5a;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #b18c94;
+}
+/* Sticky navbar at the bottom */
+.navbar {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 56.5%;
+    z-index: 1002;
+}
+.back {
+    z-index: 1003;
+    position: fixed;
+    width: 80px;
+    height: auto;
+    top: 770px;
+    left: 346px;
+}
+.home {
+    z-index: 1003;
+    position: fixed;
+    width: 80px;
+    height: auto;
+    top: 770px;
+    left: 722px;
+}
+.websites {
+    z-index: 1003;
+    position: fixed;
+    width: 80px;
+    height: auto;
+    top: 770px;
+    right: 342px;
+}
+.navbar-faded, .navbar-faded + .back, .navbar-faded + .back + .home, .navbar-faded + .back + .home + .websites {
+    opacity: 0.3 !important;
+    pointer-events: auto;
+}
