@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('mc-7.ttf') format('truetype');
+}
+
+body {
+    background-color: #efc1e0;
+    justify-content: center;
+    margin: 40px;
+}
+
+h2 {
+    font-family: 'Minecraft', sans-serif;
+    font-size: 1.5em;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+/* profile picture */
+.pfp {
+    width: 160px;
+    height: auto;
+    margin-top: 20px;
+
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    border: solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-primary {
+    width: 75%;
+    border: solid red;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text-section {
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Minecraft", serif;
+    font-weight: 400;
+    font-size: large;
+    letter-spacing: 2px;
+    background-color: #f0f0f0;
+    padding: 30px;
+    padding-left: 40px;
+    margin: 15px;
+    margin-left: 10px;
+    border-radius: 10px;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.text-section img {
+    width: 25px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.secondary-section {
+    width: 100%;
+    display: flex;
+    border: solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 {
+    width: 75%;
+    border: solid red;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.summary {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Times New Roman", serif;
+    font-weight: 100;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* skill bar */
+.skills {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    font-family: "Times New Roman", serif;
+    font-weight: 100;
+    background-color: #cf9ebf;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bar-container {
+    margin-bottom: 10px;
+}
+
+.bar-label {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+.bar-flex {
+    display: flex;
+    align-items: center;
+}
+
+.bar-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+/* html */
+.html-bar {
+    flex: 1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    min-width: 80px;
+}
+
+.html-bar-fill {
+    height: 100%;
+    width: 70%;
+    background: orange;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s;
+}
+/* css */
+.css-bar {
+    flex: 1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    min-width: 80px;
+}
+
+.css-bar-fill {
+    height: 100%;
+    width: 60%; /* Adjust percentage for skill level */
+    background: #2196f3; /* Blue for CSS */
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s;
+}
+/* javascript */
+.js-bar {
+    flex: 1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    min-width: 80px;
+}
+
+.js-bar-fill {
+    height: 100%;
+    width: 60%; /* Adjust percentage for skill level */
+    background: #f0db4f; /* Yellow for JavaScript */
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s;
+}
+/* c++ */
+.cpp-bar {
+    flex: 1;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    min-width: 80px;
+}
+.cpp-bar-fill {
+    height: 100%;
+    width: 50%; /* Adjust percentage for skill level */
+    background: #00599c; /* Blue for C++ */
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s;
+}
+
