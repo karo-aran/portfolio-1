@@ -233,7 +233,7 @@ h2 {
     right: 345px;
 
 }
-
+/* navbar faded */
 .navbar, .back, .home, .websites {
     opacity: 1;
     transition: opacity 0.5s;
