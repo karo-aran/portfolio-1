@@ -139,7 +139,7 @@ h2 {
 
 .html-bar-fill {
     height: 100%;
-    width: 70%;
+    width: 85%;
     background: orange;
     border-radius: 10px 0 0 10px;
     transition: width 0.5s;
@@ -156,7 +156,7 @@ h2 {
 
 .css-bar-fill {
     height: 100%;
-    width: 60%; /* Adjust percentage for skill level */
+    width: 90%; /* Adjust percentage for skill level */
     background: #2196f3; /* Blue for CSS */
     border-radius: 10px 0 0 10px;
     transition: width 0.5s;
@@ -173,7 +173,7 @@ h2 {
 
 .js-bar-fill {
     height: 100%;
-    width: 60%; /* Adjust percentage for skill level */
+    width: 65%; /* Adjust percentage for skill level */
     background: #f0db4f; /* Yellow for JavaScript */
     border-radius: 10px 0 0 10px;
     transition: width 0.5s;
@@ -189,7 +189,7 @@ h2 {
 }
 .cpp-bar-fill {
     height: 100%;
-    width: 50%; /* Adjust percentage for skill level */
+    width: 45%; /* Adjust percentage for skill level */
     background: #00599c; /* Blue for C++ */
     border-radius: 10px 0 0 10px;
     transition: width 0.5s;

@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function() {
             aspirationWindow = win;
         }
     });
-//why am i dong this
+//why am i doing this
     if (aspirationWindow) {
         const loadingFill = aspirationWindow.querySelector('.loading-fill');
         let timer = null;
